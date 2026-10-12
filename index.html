@@ -28,3 +28,79 @@
       --color-accent-500: #0f766e;
       --color-accent-600: #0d9488;
     }
+ @layer components {
+      .card {
+        @apply rounded-xl border border-stone-200/80 bg-white p-4 shadow-sm;
+      }
+
+      .nav-link {
+        @apply flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-stone-200 transition hover:bg-stone-700 hover:text-white;
+      }
+
+      .nav-icon {
+        @apply flex h-7 w-7 items-center justify-center text-base;
+      }
+
+      .form-input {
+        @apply w-full rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-xs text-stone-700 outline-none transition focus:border-teal-600 focus:ring-2 focus:ring-teal-100;
+      }
+
+      .section-heading {
+        @apply flex items-center gap-3 text-sm font-bold text-slate-900;
+      }
+
+      .status {
+        @apply inline-flex rounded-full px-2.5 py-1 text-[10px] font-semibold;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+    }
+
+    input, select, button {
+      font-family: inherit;
+    }
+  </style>
+</head>
+
+<body class="bg-stone-100 font-sans text-slate-800 antialiased">
+
+  <div class="min-h-screen lg:flex">
+
+    <!-- SIDEBAR -->
+    <aside class="relative flex min-h-screen w-full shrink-0 flex-col overflow-hidden bg-[#292929] text-white lg:fixed lg:inset-y-0 lg:left-0 lg:w-[285px]">
+
+      <!-- Sidebar background image -->
+      <div
+        class="absolute inset-x-0 bottom-0 h-[43%] bg-cover bg-center opacity-50"
+        style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80');">
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-[#292929] via-[#292929]/95 to-[#292929]/60"></div>
+
+      <div class="relative z-10 flex min-h-screen flex-col p-5">
+
+        <!-- Logo -->
+        <a href="#overview" class="mb-9 flex items-center gap-3 px-1">
+          <span class="flex h-12 w-12 items-center justify-center rounded-xl text-4xl text-[#d4a373]">
+            <i class="fa-solid fa-bus-simple"></i>
+          </span>
+
+          <span>
+            <span class="block text-[25px] font-bold tracking-tight">MoveFlow</span>
+            <span class="block text-xs text-stone-300">Transport Management</span>
+          </span>
+        </a>
+
+        <!-- Main Menu -->
+        <p class="mb-4 px-3 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-400">
+          Main menu
+        </p>
+
+      
